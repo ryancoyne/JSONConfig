@@ -1,11 +1,21 @@
-// Generated automatically by Perfect Assistant Application
-// Date: 2016-09-13 13:48:18 +0000
+// swift-tools-version:4.0
+
 import PackageDescription
 let package = Package(
     name: "JSONConfig",
-    targets: [],
+    products: [
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(
+           name: "JSONConfig",
+           targets: ["JSONConfig"]),
+    ],
     dependencies: [
-        .Package(url: "https://github.com/PerfectlySoft/PerfectLib.git", majorVersion: 3)
-	],
-    exclude: []
+        .package(url: "https://github.com/ryancoyne/PerfectLib.git", from: "4.0.0"),
+    ],
+    targets: [
+        .target(
+	   name: "JSONConfig",
+	   dependencies: ["PerfectLib"]
+	),
+    ]
 )
