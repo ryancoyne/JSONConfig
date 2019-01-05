@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .target(
 	   name: "JSONConfig",
-	   dependencies: ["PerfectLib"]
+	   dependencies: ["PerfectLib"],
+	   path: "Sources"
 	),
     ]
 )
